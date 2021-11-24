@@ -5,7 +5,12 @@ import android.content.res.XmlResourceParser;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
+
 import com.squareup.picasso.Picasso;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,6 +18,7 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 public class InfoActivity extends AppCompatActivity {
+    EditText url;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +27,14 @@ public class InfoActivity extends AppCompatActivity {
 
         Uri uri = Uri.parse("android.resource://com.codeschool.candycoded/" + R.drawable.store_front);
         ImageView candyStoreImageView = (ImageView)findViewById(R.id.image_view_candy_store);
-        Picasso.with(this).
+        Picasso.get().
                 load(uri).
                 into(candyStoreImageView);
 
 
     }
+
+
 
     // ***
     // TODO - Task 2 - Launch the Google Maps Activity
