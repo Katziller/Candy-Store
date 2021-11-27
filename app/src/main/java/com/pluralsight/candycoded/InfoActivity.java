@@ -1,5 +1,6 @@
 package com.pluralsight.candycoded;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 import android.net.Uri;
@@ -31,6 +32,14 @@ public class InfoActivity extends AppCompatActivity {
                 load(uri).
                 into(candyStoreImageView);
 
+
+    }
+
+    public void createMapIntent(View view) {
+        Uri url = Uri.parse ( "geo:0,0?q=618 E South St Orlando, FL 32801" );
+        Intent intent = new Intent (Intent.ACTION_VIEW, url);
+        intent.setPackage ("com.google.android.apps.maps");
+        startActivity (intent);
 
     }
 

@@ -99,21 +99,20 @@
         app:layout_constraintTop_toBottomOf="@+id/image_view_candy_store"
         app:srcCompat="@android:drawable/ic_dialog_map" />
 
-    <EditText
-        android:id="@+id/url"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:adjustViewBounds="true"
-        android:autofillHints="@string/enter_url"
-        android:inputType="textUri"
-        android:minHeight="48dp"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/text_view_hours"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/text_view_hours"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_hours">
-
-    </EditText>
+    <Button
+    android:id="@+id/url"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:adjustViewBounds="true"
+    android:autofillHints="@string/enter_url"
+    android:hint="@string/enter_url"
+    android:inputType="textUri"
+    android:minHeight="48dp"
+    android:padding="10dp"
+    app:layout_constraintEnd_toEndOf="@+id/text_view_hours"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="@+id/text_view_hours"
+    app:layout_constraintTop_toBottomOf="@+id/text_view_hours"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
