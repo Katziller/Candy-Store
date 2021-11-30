@@ -1,5 +1,6 @@
 package com.pluralsight.candycoded;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -82,14 +83,11 @@ public class MainActivity extends AppCompatActivity {
   }
 
   @Override
-  public boolean onOptionsItemSelected(MenuItem item) {
+  public boolean onOptionsItemSelected(@NonNull MenuItem item) {
     Intent infoIntent = new Intent (this, InfoActivity.class);
     startActivity ( infoIntent );
     return super.onOptionsItemSelected(item);
   }
-  // ***
-  // TODO - Task 1 - Show Store Information Activity
-  // ***
 
   private void addCandiesToDatabase(Candy[] candies) {
     SQLiteDatabase db = candyDbHelper.getWritableDatabase();
