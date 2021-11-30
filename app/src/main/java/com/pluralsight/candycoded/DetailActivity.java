@@ -68,7 +68,7 @@ public class DetailActivity extends AppCompatActivity {
         return true;
     }
 
-    public boolean onOptipnsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) {
         createShareIntent ();
         return super.onOptionsItemSelected (item);
     }
